@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Royal Events &amp; Decor – Demo</title>
+<style>
+:root{--bg:#fffaf5;--surface:#fff;--text:#2b1f24;--muted:#6f6168;--accent:#b8860b;--rose:#c2185b;--line:#eadfd6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1216;--surface:#251a20;--text:#f6ebe4;--muted:#b9a8a8;--accent:#e0b44c;--rose:#f06292;--line:#3a2a32;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1216;--surface:#251a20;--text:#f6ebe4;--muted:#b9a8a8;--accent:#e0b44c;--rose:#f06292;--line:#3a2a32;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+h1,h2,h3{font-weight:600;margin:0}
+.wrap{max-width:960px;margin:auto;padding:0 18px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:54px}
+.logo{font-size:1.15rem;color:var(--accent);font-weight:700}
+nav a{color:var(--text);text-decoration:none;font:0.85rem system-ui,sans-serif;margin-left:12px}
+.hero{padding:64px 0 54px;text-align:center;background:radial-gradient(circle at 50% 0,rgba(184,134,11,.18),transparent 65%)}
+.hero h1{font-size:clamp(2rem,8vw,3.2rem);line-height:1.15}
+.hero p{color:var(--muted);max-width:520px;margin:14px auto 24px;font-family:system-ui,sans-serif}
+.btn{display:inline-block;background:var(--rose);color:#fff;border:0;padding:12px 24px;border-radius:30px;font:600 .95rem system-ui,sans-serif;text-decoration:none;cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent);margin-left:8px}
+section{padding:44px 0}
+section h2{text-align:center;font-size:1.7rem;margin-bottom:6px}
+.sub{text-align:center;color:var(--muted);font:.9rem system-ui,sans-serif;margin:0 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.card .ic{font-size:2rem}
+.card p{color:var(--muted);font:.88rem system-ui,sans-serif;margin:6px 0 0}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.tile{aspect-ratio:1;border-radius:14px;display:flex;align-items:flex-end;padding:10px;color:#fff;font:600 .85rem system-ui,sans-serif}
+.t1{background:linear-gradient(135deg,#c2185b,#f8bbd0)}.t2{background:linear-gradient(135deg,#b8860b,#ffe082)}.t3{background:linear-gradient(135deg,#4a148c,#ce93d8)}.t4{background:linear-gradient(135deg,#00695c,#80cbc4)}.t5{background:linear-gradient(135deg,#e65100,#ffcc80)}.t6{background:linear-gradient(135deg,#1a237e,#9fa8da)}
+.rev{font-style:italic}.rev b{display:block;font:600 .85rem system-ui,sans-serif;font-style:normal;color:var(--accent);margin-top:8px}
+form{max-width:520px;margin:auto;display:grid;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--text);font:1rem system-ui,sans-serif}
+label{font:.8rem system-ui,sans-serif;color:var(--muted)}
+#ok{display:none;text-align:center;color:var(--accent);font:600 .95rem system-ui,sans-serif}
+.map{max-width:520px;margin:18px auto 0;text-align:center;color:var(--muted);font:.9rem system-ui,sans-serif}
+footer{border-top:1px solid var(--line);padding:22px 0;text-align:center;color:var(--muted);font:.8rem system-ui,sans-serif}
+footer a{color:var(--muted);margin:0 6px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><span class="logo">✦ Royal Events</span><div><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#book">Book</a></div></div></nav>
+
+<header class="hero"><div class="wrap">
+<h1>Aapke khaas dino ko<br>banaye <span style="color:var(--accent)">yaadgaar</span></h1>
+<p>Wedding, birthday, engagement aur corporate events ki premium decoration – design se lekar setup tak.</p>
+<a class="btn" href="#book">Free Quote Lein</a><a class="btn alt" href="#gallery">Hamara Kaam</a>
+</div></header>
+
+<section id="services"><div class="wrap"><h2>Hamari Services</h2><p class="sub">Har event ke liye custom decor</p>
+<div class="grid">
+<div class="card"><div class="ic">💍</div><h3>Wedding</h3><p>Mandap, stage, floral &amp; lighting</p></div>
+<div class="card"><div class="ic">🎂</div><h3>Birthday</h3><p>Theme balloons, backdrops, cake table</p></div>
+<div class="card"><div class="ic">💐</div><h3>Engagement</h3><p>Elegant ring ceremony setups</p></div>
+<div class="card"><div class="ic">🏢</div><h3>Corporate</h3><p>Launches, conferences, annual days</p></div>
+</div></div></section>
+<section id="gallery"><div class="wrap"><h2>Event Gallery</h2><p class="sub">Yahan aapki asli photos lagengi</p>
+<div class="gal">
+<div class="tile t1">Wedding Stage</div><div class="tile t2">Mandap Decor</div><div class="tile t3">Birthday Theme</div>
+<div class="tile t4">Engagement</div><div class="tile t5">Haldi Setup</div><div class="tile t6">Corporate</div>
+</div></div></section>
+<section><div class="wrap"><h2>Clients Kya Kehte Hain</h2><p class="sub">★★★★★ 4.9 Google Rating</p>
+<div class="grid">
+<div class="card rev">“Stage bilkul dream jaisa tha, sabne tareef ki!”<b>– Priya S., Wedding</b></div>
+<div class="card rev">“Time par setup aur budget mein kaam. Highly recommended.”<b>– Rohit M., Birthday</b></div>
+<div class="card rev">“Corporate event ko premium look mila.”<b>– Anita K., Corporate</b></div>
+</div></div></section>
+<section id="book"><div class="wrap"><h2>Event Book Karein</h2><p class="sub">Date, event type aur budget bataiye – hum quote bhejenge</p>
+<form id="f">
+<div><label>Aapka Naam</label><input required placeholder="Naam"></div>
+<div><label>Phone</label><input required type="tel" placeholder="Mobile number"></div>
+<div><label>Event Type</label><select><option>Wedding</option><option>Birthday</option><option>Engagement</option><option>Corporate</option></select></div>
+<div><label>Event Date</label><input type="date"></div>
+<div><label>Budget</label><select><option>₹20,000 – ₹50,000</option><option>₹50,000 – ₹1,00,000</option><option>₹1,00,000+</option></select></div>
+<div><label>Message</label><textarea rows="3" placeholder="Venue, theme, guests..."></textarea></div>
+<button class="btn" type="submit">Enquiry Bhejein</button>
+<div id="ok">✓ Demo: enquiry mil gayi! Hum jaldi contact karenge.</div>
+</form>
+<div class="map">📍 Google Maps location yahan embed hogi</div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Royal Events &amp; Decor · Demo by Vyashika Digital<br><a href="#">Terms &amp; Conditions</a>·<a href="#">Refund Policy</a>·<a href="#">Privacy Policy</a></div></footer>
+<a class="wa" href="https://wa.me/919555083044" aria-label="WhatsApp">💬</a>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';});
+</script>
+</body>
+</html>
