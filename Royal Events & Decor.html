@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Royal Events &amp; Decor</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#e6e0d9;--text:#3a2f33;--muted:#7d6f72;--gold:#b8892b;--rose:#c2406f;--ok:#2e9d62;--sh1:#fff9;--sh2:#b9b0a7aa;--g:linear-gradient(135deg,var(--gold),#f3d98b);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:border-box}
+:root[data-theme="dark"]{--bg:#25202a;--text:#f1e8e2;--muted:#a99da3;--rose:#f06292;--sh1:#322b38;--sh2:#17131b;color-scheme:dark}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:300 1rem/1.7 Poppins,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:500;margin:0;line-height:1.2}
+.wrap{max-width:1040px;margin:auto;padding:0 18px}
+.gold{background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.out{background:var(--bg);box-shadow:9px 9px 18px var(--sh2),-9px -9px 18px var(--sh1);border-radius:24px}
+.in{background:var(--bg);box-shadow:inset 5px 5px 10px var(--sh2),inset -5px -5px 10px var(--sh1);border-radius:16px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;padding:10px 0;background:var(--bg)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.logo{display:inline-block;padding:9px 16px;font:700 1.05rem "Playfair Display",serif;white-space:nowrap}
+.links{display:flex;gap:4px;align-items:center}
+.links a,.ib{color:var(--text);text-decoration:none;font-size:.7rem;letter-spacing:1.3px;text-transform:uppercase;padding:9px 11px;border-radius:14px;border:0;background:var(--bg);cursor:pointer;font-family:inherit}
+.links a.on,.links a:hover{box-shadow:inset 3px 3px 6px var(--sh2),inset -3px -3px 6px var(--sh1);color:var(--gold)}
+.ib{font-size:1.05rem;box-shadow:4px 4px 8px var(--sh2),-4px -4px 8px var(--sh1)}
+#mb{display:none}
+@media(max-width:900px){#mb{display:block}.links{position:absolute;left:12px;right:12px;top:66px;flex-direction:column;padding:14px;border-radius:22px;background:var(--bg);box-shadow:9px 9px 18px var(--sh2),-9px -9px 18px var(--sh1);display:none}.links.open{display:flex}.links a{width:100%;text-align:center}}
+.btn{display:inline-block;padding:13px 26px;border-radius:40px;border:0;font:500 .78rem Poppins,sans-serif;letter-spacing:1.4px;text-transform:uppercase;text-decoration:none;cursor:pointer;color:var(--text);background:var(--bg);box-shadow:6px 6px 12px var(--sh2),-6px -6px 12px var(--sh1);margin:4px}
+.btn:active{box-shadow:inset 4px 4px 8px var(--sh2),inset -4px -4px 8px var(--sh1)}
+.btn.p{background:var(--g);color:#2a1c08}.btn.s{padding:8px 14px;font-size:.68rem}.btn.d{color:var(--rose)}
+.hero{padding:44px 0 56px}.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;text-align:center}}
+.eyebrow{font-size:.68rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.hero h1{font-size:clamp(2.1rem,7vw,3.6rem)}.hero p{color:var(--muted);margin:16px 0 24px}
+.scene{perspective:900px;height:280px;display:flex;align-items:center;justify-content:center}
+.cube{width:140px;height:140px;position:relative;transform-style:preserve-3d;animation:spin 14s linear infinite}
+.cube div{position:absolute;inset:0;border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:2.8rem;background:var(--bg);box-shadow:inset 6px 6px 12px var(--sh2),inset -6px -6px 12px var(--sh1);border:1px solid rgba(212,175,55,.35)}
+.cube div:nth-child(1){transform:translateZ(70px)}.cube div:nth-child(2){transform:rotateY(90deg) translateZ(70px)}.cube div:nth-child(3){transform:rotateY(180deg) translateZ(70px)}.cube div:nth-child(4){transform:rotateY(-90deg) translateZ(70px)}.cube div:nth-child(5){transform:rotateX(90deg) translateZ(70px)}.cube div:nth-child(6){transform:rotateX(-90deg) translateZ(70px)}
+@keyframes spin{to{transform:rotateX(360deg) rotateY(360deg)}}
+section{padding:46px 0}.head{text-align:center;margin-bottom:28px}.head h2{font-size:clamp(1.7rem,6vw,2.5rem)}.head p{color:var(--muted);margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:22px}
+.card{padding:26px 20px;text-align:center}.tilt{transition:transform .15s}
+.ic{width:66px;height:66px;margin:0 auto 12px;font-size:1.7rem;display:flex;align-items:center;justify-content:center;border-radius:50%}
+.card p{margin:4px 0 0;color:var(--muted);font-size:.88rem}.price{color:var(--gold);font-weight:500}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}.tabs .on{box-shadow:inset 4px 4px 8px var(--sh2),inset -4px -4px 8px var(--sh1);color:var(--gold)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:20px}
+.tile{aspect-ratio:1;padding:9px;cursor:pointer;transition:.3s}.tile:hover{transform:translateY(-6px)}
+.tile i{display:flex;align-items:flex-end;width:100%;height:100%;border-radius:16px;padding:12px;font:500 1rem "Playfair Display",serif;color:#fff;font-style:normal}
+.tile small{display:block;font:.6rem Poppins;letter-spacing:2px;color:#ffe9a8;text-transform:uppercase}
+.t0{background:radial-gradient(circle at 30% 20%,#ffd1e3,#c2185b 60%,#4a0a25)}.t1{background:radial-gradient(circle at 70% 25%,#fff0b3,#b8860b 60%,#3a2a05)}.t2{background:radial-gradient(circle at 30% 30%,#e8c5ff,#6a1b9a 60%,#1f0a33)}.t3{background:radial-gradient(circle at 60% 20%,#b8f5ea,#00796b 60%,#06302b)}.t4{background:radial-gradient(circle at 30% 25%,#ffe0b2,#e65100 60%,#3b1500)}.t5{background:radial-gradient(circle at 70% 30%,#c5cbff,#283593 60%,#0b0f33)}
+#lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;padding:20px}#lb.on{display:flex}
+#lb div{width:min(420px,90vw);aspect-ratio:1;border-radius:24px;display:flex;align-items:flex-end;padding:24px;color:#fff;font:500 1.5rem "Playfair Display",serif;animation:pop .35s}
+@keyframes pop{from{transform:scale(.6) rotateY(90deg);opacity:0}}
+.box{padding:26px;max-width:680px;margin:0 auto 24px}
+label{display:block;font-size:.66rem;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+input,select,textarea{width:100%;padding:12px 14px;border:0;color:var(--text);font:400 .92rem Poppins,sans-serif;border-radius:14px;background:var(--bg);box-shadow:inset 5px 5px 10px var(--sh2),inset -5px -5px 10px var(--sh1)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}input[type=range]{padding:0;height:10px;accent-color:#d4af37}input[type=color]{height:44px;padding:4px}
+.fg{margin-bottom:14px}.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:560px){.row{grid-template-columns:1fr}}
+.err{color:var(--rose);font-size:.74rem;margin-top:4px}
+.cal{max-width:420px;margin:0 auto 20px;padding:18px}.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.cg{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center;font-size:.8rem}.cg b{font-size:.62rem;color:var(--muted);letter-spacing:1px}
+.dy{aspect-ratio:1;border:0;border-radius:12px;font:400 .85rem Poppins;color:var(--text);cursor:pointer;background:var(--bg);box-shadow:3px 3px 6px var(--sh2),-3px -3px 6px var(--sh1)}
+.dy.pa{opacity:.3;cursor:default;box-shadow:none}.dy.pe{background:#f4c95d;color:#4a3500;cursor:not-allowed}.dy.bk{background:var(--rose);color:#fff;cursor:not-allowed}.dy.se{background:var(--ok);color:#fff}
+.lg{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:.7rem;color:var(--muted);margin-top:12px}.lg span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:var(--c)}
+.soc{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}.soc a{width:64px;height:64px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;border-radius:50%}
+.pill{display:inline-block;padding:3px 12px;border-radius:20px;font-size:.68rem;letter-spacing:1px;text-transform:uppercase;color:#fff;background:var(--c,#999)}
+.bar{height:10px;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;background:var(--g)}
+.kp{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-bottom:22px}.kp div{padding:16px;text-align:center}.kp h3{font-size:1.35rem}.kp span{font-size:.64rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.item{padding:16px 18px;margin-bottom:16px;text-align:left}.item .r{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+table{width:100%;border-collapse:collapse;font-size:.8rem}td,th{padding:8px 6px;text-align:left;border-bottom:1px solid var(--sh2)}.sc{overflow-x:auto}
+details{padding:16px 20px;margin-bottom:16px;cursor:pointer}summary{font-weight:500}details p{color:var(--muted);margin:8px 0 0;font-size:.9rem}
+footer{padding:30px 0 90px;text-align:center;color:var(--muted);font-size:.78rem}footer a{color:var(--muted);margin:0 8px}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;text-decoration:none;box-shadow:0 8px 22px rgba(37,211,102,.5)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#222;color:#fff;padding:10px 20px;border-radius:30px;font-size:.8rem;z-index:60}
+.note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:10px}
+.pg{animation:in .5s}@keyframes in{from{opacity:0;transform:translateY(24px) rotateX(8deg)}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><span class="logo out"><b class="gold" id="lg">✦ Royal Events</b></span>
+<div class="links" id="lk"></div>
+<div style="display:flex;gap:8px"><button class="ib" id="th" aria-label="Theme">🌙</button><button class="ib" id="mb" aria-label="Menu">☰</button></div></div></nav>
+<main id="app"></main>
+<footer><div class="wrap"><b class="gold" id="fn" style="font:700 1.3rem 'Playfair Display',serif"></b><br>© 2026 All rights reserved<br><a href="#contact">Terms &amp; Conditions</a>·<a href="#contact">Refund Policy</a>·<a href="#contact">Privacy Policy</a></div></footer>
+<a class="wa" id="wa" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+<div id="lb"><div></div></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const inr=n=>"₹"+Math.round(+n||0).toLocaleString("en-IN");
+const COLS=["busy","quotes","settings","bookings","expenses","staff","mine"];
+let db=null,uid="local",isAdmin=false,mode="demo",tab="dash",cal=new Date(),sel="",st={};COLS.forEach(c=>st[c]={});
+const DS={name:"Royal Events & Decor",wa:"910000000000",ig:"",fb:"",yt:"",color:"#b8892b"};
+const S=()=>({...DS,...(st.settings.main||{})});
+const path=c=>c==="mine"?`data/users/${uid}/mine`:c;
+function saveL(){if(db)return;try{localStorage.setItem("rd2",JSON.stringify(st))}catch(e){}}
+function toast(m){const t=document.createElement("div");t.className="toast";t.textContent=m;document.body.append(t);setTimeout(()=>t.remove(),2400)}
+function put(c,id,o){st[c][id]=o;saveL();if(db)db.collection(path(c)).doc(id).set(o).catch(()=>toast("Save nahi hua (permission)"))}
+function del(c,id){delete st[c][id];saveL();if(db)db.collection(path(c)).doc(id).delete().catch(()=>{})}
+function sub(){COLS.forEach(c=>{try{db.collection(path(c)).onSnapshot(s=>{st[c]={};s.docs.forEach(d=>st[c][d.id]=d.data());soft()},()=>{})}catch(e){}})}
+(async()=>{try{if(window.claude){db=await claude.use("db");const u=await claude.use("user");if(u){uid=await u.id();isAdmin=await u.canEdit()}}}catch(e){db=null}
+if(db){mode="live";sub()}else{isAdmin=true;try{const x=JSON.parse(localStorage.getItem("rd2")||"null");if(x)COLS.forEach(c=>st[c]=x[c]||{})}catch(e){}}
+render()})();
+const rt=()=>location.hash.slice(1)||"home";
+const NAV=[["home","Home"],["services","Services"],["gallery","Gallery"],["book","Book"],["contact","Contact"],["my","My Bookings"]];
+function shell(){const s=S();document.documentElement.style.setProperty("--gold",s.color);$("#lg").textContent="✦ "+s.name;$("#fn").textContent="✦ "+s.name;$("#wa").href="https://wa.me/"+s.wa;document.title=s.name;
+$("#lk").innerHTML=NAV.map(([k,l])=>`<a href="#${k}" class="${rt()===k?"on":""}">${l}</a>`).join("")+(isAdmin?`<a href="#admin" class="${rt()==="admin"?"on":""}">⚙ Admin</a>`:"")}
+function soft(){const r=rt();if(r==="book"&&$("#cal")){$("#cal").innerHTML=calH();return}const a=document.activeElement;if(a&&/INPUT|SELECT|TEXTAREA/.test(a.tagName))return;render()}
+const T=["Wedding","Birthday","Engagement","Corporate"],IC=["💍","🎂","💐","🏢"],BASE=[30000,12000,20000,25000],FROM=["₹30,000","₹12,000","₹20,000","₹25,000"];
+const hd=(a,b,p)=>`<div class="head"><h2>${a} <span class="gold">${b}</span></h2>${p?`<p>${p}</p>`:""}</div>`;
+const svc=()=>T.map((t,i)=>`<div class="card out tilt"><div class="ic in">${IC[i]}</div><h3>${t}</h3><p>${["Mandap, stage, floral &amp; lighting","Theme balloons, backdrops &amp; dessert tables","Ring ceremony &amp; sangeet setups","Launches, conferences &amp; annual days"][i]}</p><p class="price">Starting ${FROM[i]}</p></div>`).join("");
+const TL=["Royal Stage","Golden Mandap","Fairytale Theme","Floral Romance","Sunset Party","Gala Night"],TC=["Wedding","Wedding","Birthday","Engagement","Birthday","Corporate"];
+const gal=f=>TL.map((l,i)=>(f==="All"||TC[i]===f)?`<div class="tile out" data-lb="${i}"><i class="t${i}"><span><small>${TC[i]}</small>${l}</span></i></div>`:"").join("");
+const P={
+home:()=>`<header class="hero"><div class="wrap"><div><div class="eyebrow">Luxury Event Decorators</div><h1>Where Every Celebration Becomes a <span class="gold">Masterpiece</span></h1><p>Wedding, birthday, engagement aur corporate events ki premium decoration. Date availability dekhein aur seedha book karein.</p><a class="btn p" href="#book">Check Dates &amp; Book</a><a class="btn" href="#gallery">Our Work</a></div><div class="scene"><div class="cube"><div>💍</div><div>🎂</div><div>💐</div><div>🏢</div><div>✨</div><div>🎈</div></div></div></div></header>
+<section><div class="wrap">${hd("Our","Services")}<div class="grid">${svc()}</div></div></section>
+<section><div class="wrap">${hd("Loved by","Clients")}<div class="grid"><div class="card out tilt">★★★★★<p>“Stage bilkul dream jaisa tha!”</p><p class="price">Priya S.</p></div><div class="card out tilt">★★★★★<p>“Time par setup, budget mein kaam.”</p><p class="price">Rohit M.</p></div><div class="card out tilt">★★★★★<p>“Corporate event ko premium look mila.”</p><p class="price">Anita K.</p></div></div></div></section>`,
+services:()=>`<section><div class="wrap">${hd("Our","Services","Har event ke liye custom decor")}<div class="grid">${svc()}</div></div></section>
+<section><div class="wrap">${hd("Instant","Estimate")}<div class="box out"><div class="row"><div class="fg"><label>Event</label><select id="et">${T.map((t,i)=>`<option value="${BASE[i]}">${t}</option>`).join("")}</select></div><div class="fg"><label>Style</label><select id="ds"><option value="1">Classic</option><option value="1.4">Premium</option><option value="1.9">Royal Luxury</option></select></div></div><div class="fg"><label>Guests: <b id="gv">100</b></label><input type="range" id="gs" min="20" max="1000" step="10" value="100"></div><div class="in" style="text-align:center;padding:16px;margin-bottom:16px"><h3 class="gold" id="ev"></h3></div><a class="btn p" href="#book" style="display:block;text-align:center">Book Karein</a></div></div></section>`,
+gallery:()=>`<section><div class="wrap">${hd("Event","Gallery","Tap karke bada dekhein")}<div class="tabs" id="tabs">${["All",...T].map((t,i)=>`<button class="btn s ${i?"":"on"}" data-f="${t}">${t}</button>`).join("")}</div><div class="gal" id="gl">${gal("All")}</div></div></section>`,
+book:()=>`<section><div class="wrap">${hd("Book Your","Event","Pehle date chunein, phir details bharein")}<div class="cal out" id="cal">${calH()}</div>
+<form class="box out" id="f" novalidate><div class="row"><div class="fg"><label>Naam</label><input id="n"></div><div class="fg"><label>Phone</label><input id="p" type="tel" placeholder="10-digit"></div></div><div class="row"><div class="fg"><label>Event</label><select id="t">${T.map(t=>`<option>${t}</option>`).join("")}</select></div><div class="fg"><label>Guests</label><input id="g" type="number" min="1" value="100"></div></div><div class="fg"><label>Venue</label><input id="v" placeholder="Venue / city"></div><div class="fg"><label>Message</label><textarea id="m" rows="2"></textarea></div><div class="err" id="er"></div><button class="btn p" style="width:100%">Request Booking</button><div class="note">${mode==="live"?"Request owner ko turant dikhegi.":"Demo mode: data sirf is device par save hota hai."}</div></form></div></section>`,
+contact:()=>{const s=S(),l=(u,i,n)=>u?`<a class="out" href="${esc(u)}" target="_blank" rel="noopener" title="${n}">${i}</a>`:"";return`<section><div class="wrap">${hd("Connect","With Us","Social media par hamein follow karein")}<div class="soc">${l("https://wa.me/"+s.wa,"💬","WhatsApp")}${l(s.ig,"📸","Instagram")}${l(s.fb,"👍","Facebook")}${l(s.yt,"▶️","YouTube")}</div><div class="note">Links admin panel ki Settings se badalte hain.</div></div></section>
+<section><div class="wrap"><div class="box out" style="text-align:center">📍 Google Maps location yahan embed hogi</div>${hd("Common","Questions")}<div style="max-width:680px;margin:auto"><details class="out"><summary>Booking kitne din pehle?</summary><p>Wedding 1-2 mahine, baaki 1-2 hafte pehle.</p></details><details class="out"><summary>Advance kitna?</summary><p>Booking confirm karne par 30-50% advance.</p></details><details class="out"><summary>Terms, Refund &amp; Privacy</summary><p>Advance non-refundable hai agar event 7 din se kam mein cancel ho. Aapki details sirf booking ke liye use hoti hain.</p></details></div></div></section>`},
+my:()=>{const rows=Object.entries(st.mine).sort((a,b)=>a[1].date<b[1].date?-1:1);return`<section><div class="wrap" style="max-width:720px">${hd("My","Bookings","Customer panel: apni booking ka status dekhein")}${rows.length?rows.map(([id,b])=>{const bz=st.busy[b.date],ok=bz&&bz.id===id,s=ok?bz.status:"declined",q=st.quotes[id]||{},pc=q.quote?Math.min(100,(q.paid||0)/q.quote*100):0;return`<div class="item out"><div class="r"><b>${esc(b.type)} · ${esc(b.date)}</b><span class="pill" style="--c:${s==="booked"?"#2e9d62":s==="pending"?"#d89b00":"#c2406f"}">${s==="booked"?"Confirmed":s==="pending"?"Pending":"Not available"}</span></div><div style="font-size:.85rem;color:var(--muted)">${esc(b.name)} · ID ${id}</div>${q.quote?`<div class="r" style="margin-top:10px"><span>Quote: <b>${inr(q.quote)}</b></span><span>Paid: <b>${inr(q.paid)}</b></span><span>Baaki: <b>${inr(q.quote-(q.paid||0))}</b></span></div><div class="bar in" style="margin-top:8px"><i style="width:${pc}%"></i></div>`:`<div class="note" style="text-align:left">Quote owner ki taraf se jald milega.</div>`}${s==="pending"?`<button class="btn s d" data-act="cancel" data-id="${id}">Cancel Request</button>`:""}</div>`}).join(""):`<div class="box out" style="text-align:center">Abhi koi booking nahi.<br><a class="btn p" href="#book">Book Karein</a></div>`}</div></section>`},
+admin:()=>{if(!isAdmin)return`<section><div class="wrap"><div class="box out" style="text-align:center">🔒 Admin panel sirf owner ke liye hai.</div></div></section>`;
+const B=Object.entries(st.bookings).map(([id,b])=>({id,...b})).sort((a,b)=>a.date<b.date?-1:1),E=Object.entries(st.expenses).map(([id,e])=>({id,...e})).sort((a,b)=>a.date<b.date?1:-1),SF=Object.entries(st.staff).map(([id,s])=>({id,...s}));
+const sum=a=>a.reduce((x,y)=>x+(+y.amount||0),0),cat=c=>sum(E.filter(e=>e.cat===c)),rec=B.reduce((x,b)=>x+(+(st.quotes[b.id]||{}).paid||0),0),qt=B.reduce((x,b)=>x+(+(st.quotes[b.id]||{}).quote||0),0),prof=rec-cat("Company")-cat("Booking");
+const tb=["dash","Dashboard","book","Bookings","exp","Expenses","staff","Staff","set","Settings"];let tabs=`<div class="tabs">`;for(let i=0;i<tb.length;i+=2)tabs+=`<button class="btn s ${tab===tb[i]?"on":""}" data-tab="${tb[i]}">${tb[i+1]}</button>`;tabs+="</div>";
+let h="";
+if(tab==="dash")h=`<div class="kp"><div class="out"><h3>${B.length}</h3><span>Bookings</span></div><div class="out"><h3>${inr(qt)}</h3><span>Total Quote</span></div><div class="out"><h3 style="color:var(--ok)">${inr(rec)}</h3><span>Received</span></div><div class="out"><h3>${inr(cat("Company"))}</h3><span>Company Kharch</span></div><div class="out"><h3>${inr(cat("Booking"))}</h3><span>Booking Kharch</span></div><div class="out"><h3>${inr(cat("Personal"))}</h3><span>Personal Kharch</span></div><div class="out"><h3 style="color:${prof<0?"var(--rose)":"var(--ok)"}">${inr(prof)}</h3><span>Business Profit</span></div><div class="out"><h3>${inr(prof-cat("Personal"))}</h3><span>Personal ke baad</span></div></div>
+<div class="box out sc"><h3 style="margin-bottom:10px">Customer-wise Kharch &amp; Profit</h3><table><tr><th>Customer</th><th>Date</th><th>Quote</th><th>Mila</th><th>Kharch</th><th>Profit</th></tr>${B.map(b=>{const q=st.quotes[b.id]||{},sp=sum(E.filter(e=>e.bid===b.id));return`<tr><td>${esc(b.name)}</td><td>${esc(b.date)}</td><td>${inr(q.quote)}</td><td>${inr(q.paid)}</td><td>${inr(sp)}</td><td style="color:${(q.paid||0)-sp<0?"var(--rose)":"var(--ok)"}">${inr((q.paid||0)-sp)}</td></tr>`}).join("")||"<tr><td colspan=6>Koi booking nahi</td></tr>"}</table></div>`;
+if(tab==="book")h=B.map(b=>{const q=st.quotes[b.id]||{},sp=sum(E.filter(e=>e.bid===b.id));return`<div class="item out"><div class="r"><b>${esc(b.name)} · ${esc(b.type)} · ${esc(b.date)}</b><a href="https://wa.me/91${esc(b.phone)}" target="_blank" rel="noopener">📞 ${esc(b.phone)}</a></div><div style="font-size:.82rem;color:var(--muted)">${esc(b.guests)} guests · ${esc(b.venue)} · ${esc(b.msg)}</div><div class="row" style="margin-top:10px"><div><label>Status</label><select data-s="${b.id}">${["pending","confirmed","completed","declined","cancelled"].map(x=>`<option ${b.status===x?"selected":""}>${x}</option>`).join("")}</select></div><div class="row"><div><label>Quote ₹</label><input type="number" data-q="${b.id}" value="${q.quote||""}"></div><div><label>Mila ₹</label><input type="number" data-pd="${b.id}" value="${q.paid||""}"></div></div></div><div class="r" style="margin-top:10px"><span style="font-size:.8rem">Kharch ${inr(sp)} · Profit ${inr((q.paid||0)-sp)}</span><span><button class="btn s p" data-act="sv" data-id="${b.id}">Save</button><button class="btn s d" data-act="db" data-id="${b.id}">Delete</button></span></div></div>`}).join("")||`<div class="box out" style="text-align:center">Koi booking nahi</div>`;
+if(tab==="exp")h=`<div class="box out"><div class="row"><div class="fg"><label>Date</label><input type="date" id="ed" value="${new Date().toISOString().slice(0,10)}"></div><div class="fg"><label>Category</label><select id="ec"><option>Company</option><option>Booking</option><option>Personal</option></select></div></div><div class="row"><div class="fg"><label>Booking (agar Booking kharch)</label><select id="eb"><option value="">—</option>${B.map(b=>`<option value="${b.id}">${esc(b.name)} · ${esc(b.date)}</option>`).join("")}</select></div><div class="fg"><label>Amount ₹</label><input type="number" id="ea"></div></div><div class="fg"><label>Item</label><input id="ei" placeholder="Rent, flowers, petrol..."></div><button class="btn p" data-act="ae">Add Kharch</button></div><div class="box out sc"><table><tr><th>Date</th><th>Type</th><th>Item</th><th>₹</th><th></th></tr>${E.map(e=>{const b=st.bookings[e.bid];return`<tr><td>${esc(e.date)}</td><td>${esc(e.cat)}${b?" · "+esc(b.name):""}</td><td>${esc(e.item)}</td><td>${inr(e.amount)}</td><td><button class="btn s d" data-act="de" data-id="${e.id}">✕</button></td></tr>`}).join("")}</table></div>`;
+if(tab==="staff")h=`<div class="box out"><div class="row"><div class="fg"><label>Naam</label><input id="sn"></div><div class="fg"><label>Role</label><input id="sr" placeholder="Decorator, helper..."></div></div><div class="row"><div class="fg"><label>Phone</label><input id="sp" type="tel"></div><div class="fg"><label>Wage ₹ / event</label><input id="sw" type="number"></div></div><button class="btn p" data-act="as">Add Staff</button></div>${SF.map(s=>`<div class="item out"><div class="r"><b>${esc(s.name)} · ${esc(s.role)}</b><span>${esc(s.phone)} · ${inr(s.wage)}</span></div><div style="margin-top:8px"><button class="btn s p" data-act="pw" data-id="${s.id}">Wage Pay (kharch mein jodein)</button><button class="btn s d" data-act="ds" data-id="${s.id}">Remove</button></div></div>`).join("")}`;
+if(tab==="set"){const s=S();h=`<div class="box out">${[["sname","Business Name",s.name],["swa","WhatsApp (91XXXXXXXXXX)",s.wa],["sig","Instagram URL",s.ig],["sfb","Facebook URL",s.fb],["syt","YouTube URL",s.yt]].map(([i,l,v])=>`<div class="fg"><label>${l}</label><input id="${i}" value="${esc(v)}"></div>`).join("")}<div class="fg"><label>Accent Color</label><input type="color" id="scl" value="${esc(s.color)}"></div><button class="btn p" data-act="ss">Save Settings</button></div>`}
+return`<section><div class="wrap">${hd("Admin","Panel",mode==="live"?"Live data":"Demo mode: sirf is device par")}${tabs}${h}</div></section>`}};
+function calH(){const y=cal.getFullYear(),m=cal.getMonth(),f=new Date(y,m,1).getDay(),n=new Date(y,m+1,0).getDate(),td=new Date().toISOString().slice(0,10);let c="";for(let i=0;i<f;i++)c+="<span></span>";
+for(let d=1;d<=n;d++){const k=`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`,b=st.busy[k];const cl=k<td?"pa":b?(b.status==="booked"?"bk":"pe"):k===sel?"se":"";c+=`<button type="button" class="dy ${cl}" data-d="${k}" ${cl==="pa"||b?'aria-disabled="true"':""}>${d}</button>`}
+return`<div class="ch"><button type="button" class="ib" data-m="-1">‹</button><b>${cal.toLocaleString("en",{month:"long",year:"numeric"})}</b><button type="button" class="ib" data-m="1">›</button></div><div class="cg">${"SMTWTFS".split("").map(x=>`<b>${x}</b>`).join("")}${c}</div><div class="lg"><span style="--c:#bbb">Available</span><span style="--c:#f4c95d">Pending</span><span style="--c:#c2406f">Booked</span><span style="--c:#2e9d62">Aapki date${sel?": "+sel:""}</span></div>`}
+function render(){shell();const r=P[rt()]?rt():"home";$("#app").innerHTML=`<div class="pg">${P[r]()}</div>`;$("#lk").classList.remove("open");if(r==="services")est();$$(".tilt").forEach(c=>{if(!matchMedia("(hover:hover)").matches)return;c.onmousemove=e=>{const b=c.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;c.style.transform=`perspective(800px) rotateY(${x*14}deg) rotateX(${-y*14}deg)`};c.onmouseleave=()=>c.style.transform=""})}
+function est(){const g=+$("#gs").value;$("#gv").textContent=g;const lo=(+$("#et").value+g*180)*(+$("#ds").value),f=n=>inr(Math.round(n/1000)*1000);$("#ev").textContent=f(lo)+" – "+f(lo*1.25)}
+window.addEventListener("hashchange",()=>{render();scrollTo(0,0)});
+$("#mb").onclick=()=>$("#lk").classList.toggle("open");
+try{const s=localStorage.getItem("th");if(s)document.documentElement.dataset.theme=s}catch(e){}
+const ti=()=>$("#th").textContent=document.documentElement.dataset.theme==="dark"?"☀️":"🌙";ti();
+$("#th").onclick=()=>{const r=document.documentElement,v=r.dataset.theme==="dark"?"light":"dark";r.dataset.theme=v;ti();try{localStorage.setItem("th",v)}catch(e){}};
+document.addEventListener("input",e=>{if(["et","ds","gs"].includes(e.target.id))est()});
+$("#lb").onclick=()=>$("#lb").classList.remove("on");
+const v=i=>($("#"+i)||{}).value||"",rid=()=>"b"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+document.addEventListener("click",e=>{const t=e.target.closest("button,.tile");if(!t)return;
+if(t.dataset.lb!==undefined){const d=$("#lb div");d.className="t"+t.dataset.lb;d.innerHTML=`<span>${TL[t.dataset.lb]}</span>`;$("#lb").classList.add("on");return}
+if(t.dataset.f){$$("#tabs button").forEach(x=>x.classList.toggle("on",x===t));$("#gl").innerHTML=gal(t.dataset.f);return}
+if(t.dataset.m){cal=new Date(cal.getFullYear(),cal.getMonth()+ +t.dataset.m,1);$("#cal").innerHTML=calH();return}
+if(t.dataset.d){if(t.classList.contains("pa")||st.busy[t.dataset.d])return;sel=t.dataset.d;$("#cal").innerHTML=calH();return}
+if(t.dataset.tab){tab=t.dataset.tab;render();return}
+const a=t.dataset.act,id=t.dataset.id;if(!a)return;
+if(a==="cancel"){const b=st.mine[id];if(b&&st.busy[b.date]&&st.busy[b.date].id===id)del("busy",b.date);if(st.bookings[id])put("bookings",id,{...st.bookings[id],status:"cancelled"});render()}
+if(a==="sv"){const b=st.bookings[id],s=document.querySelector(`[data-s="${id}"]`).value,q=+document.querySelector(`[data-q="${id}"]`).value||0,p=+document.querySelector(`[data-pd="${id}"]`).value||0;put("bookings",id,{...b,status:s});put("quotes",id,{quote:q,paid:p});
+if(["declined","cancelled"].includes(s)){if(st.busy[b.date]&&st.busy[b.date].id===id)del("busy",b.date)}else put("busy",b.date,{id,type:b.type,status:s==="pending"?"pending":"booked"});toast("Saved");render()}
+if(a==="db"){if(!confirm("Booking delete karein?"))return;const b=st.bookings[id];if(b&&st.busy[b.date]&&st.busy[b.date].id===id)del("busy",b.date);del("bookings",id);del("quotes",id);render()}
+if(a==="ae"){const am=+v("ea");if(!am||!v("ei"))return toast("Item aur amount likhein");put("expenses",rid(),{date:v("ed"),cat:v("ec"),bid:v("ec")==="Booking"?v("eb"):"",item:v("ei"),amount:am});render()}
+if(a==="de"){del("expenses",id);render()}
+if(a==="as"){if(!v("sn"))return toast("Naam likhein");put("staff",rid(),{name:v("sn"),role:v("sr"),phone:v("sp"),wage:+v("sw")||0});render()}
+if(a==="ds"){del("staff",id);render()}
+if(a==="pw"){const s=st.staff[id];put("expenses",rid(),{date:new Date().toISOString().slice(0,10),cat:"Company",bid:"",item:"Wage – "+s.name,amount:s.wage});toast("Kharch mein joda gaya")}
+if(a==="ss"){put("settings","main",{name:v("sname")||DS.name,wa:v("swa").replace(/\D/g,"")||DS.wa,ig:v("sig"),fb:v("sfb"),yt:v("syt"),color:v("scl")});toast("Settings saved");render()}});
+document.addEventListener("submit",e=>{if(e.target.id!=="f")return;e.preventDefault();const er=$("#er");
+if(!sel)return er.textContent="Pehle calendar se date chunein";if(v("n").trim().length<2)return er.textContent="Naam likhein";if(!/^[6-9]\d{9}$/.test(v("p").trim()))return er.textContent="Sahi 10-digit number likhein";
+if(st.busy[sel])return er.textContent="Ye date ab available nahi hai";
+const id=rid(),d={name:v("n").trim(),phone:v("p").trim(),type:v("t"),guests:v("g"),venue:v("v"),msg:v("m"),date:sel,status:"pending",at:Date.now()};
+put("busy",sel,{id,type:d.type,status:"pending"});put("bookings",id,d);put("mine",id,{date:sel,type:d.type,name:d.name});sel="";toast("Request bhej di gayi ✓");location.hash="my"});
+</script>
+</body>
+</html>
